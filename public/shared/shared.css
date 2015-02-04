@@ -1,35 +1,81 @@
-.ui-autocomplete-input {
-	width: 500px;
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none;
 }
 
-.ui-autocomplete-category {
-     background-color: #fff;
-     border-bottom: 1px solid #5BB676; 
-     color: #5BB676; 
-     font-weight: 500;
-     font-size: 2rem;
-     height: 35px;
-     line-height: 35px;
-     padding-left: 7px;
+.album-search {
+    margin-top: 100px;
 }
 
-.ui-menu .ui-menu-item a {
-    color: #5B5B5B;
-    line-height: 35px;
-    cursor: pointer;
+.album-search input[type=text] {
+    font-size: 32px;
+    line-height: 36px;
+    height: 40px;
+    width: 500px;
 }
 
-#search {
-    border: 2px solid #ddd;
-    border-radius: 2px;
-    box-shadow: none;
-    height: 50px;
-    padding-left: 8px;
-    outline: none;
+.album-search .menu {
+    background-color: rgb(45, 45, 45);
 }
 
+.album-search h3 {
+    width: 125px;
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: 300;
+    color: rgb(187, 187, 187);
+    float: left;
+}
 
+.album-search ul {
+    background-color: #FFF;
+    margin: 0;
+    margin-left: 125px;
+    padding: 0;
+    list-style: none;
+}
 
+.album-search .results {
+    width: 375px;
+    margin: auto;
+    text-align: left;
+    min-height: 64px;
+    padding: 5px;
+}
+
+.album-search .results.active {
+    background-color: rgb(46, 79, 156);
+}
+
+.album-search .results.active .name {
+    color: #FFF;
+}
+
+.album-search .results.active {
+    background-color: rgb(46, 79, 156);
+}
+
+.album-search .results .name {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.album-search .results p {
+    margin-bottom: 5px;
+    margin-left: 74px;
+}
+
+.album-search .results .artist {
+    font-size: 16px;
+    line-height: 20px;
+    color: #999;
+    margin-left: 74px;
+}
+
+.album-search .results img {
+    width: 64px;
+    height: 64px;
+    float: left;
+}
 
 /* =Media Queries
 -------------------------------------------------------------- */

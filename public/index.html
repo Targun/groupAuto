@@ -7,16 +7,35 @@
     <title>Sample App</title>
     <link rel="shortcut icon" type="/img/png" href="#"/>
     <!-- Styles -->
-
+    <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css' rel='stylesheet'>
     <link href='/shared/shared.css' rel='stylesheet'>
 
   </head>
 
-  <body>
+  <body ng-contoller="shared in SharedCtrl">
 
 
 
-  <group-auto></group-auto>
+  <div class="container">
+      <div ng-controller="AlbumSearch" class="album-search text-center" ng-cloak>
+          <typeahead class="typeahead" items="music" term="term" search="searchMusic(term)" select="selectMusic(item)">
+              <div class="menu" ng-cloak>
+                  <h3 ng-show="hasAlbums()">Albums</h3>
+                  <ul>
+                      <li typeahead-item="album" ng-repeat="album in albums" class="results">
+                          <img ng-src="{{imageSource(album)}}"><p class="name">{{album.name}}</p><p class="artist">{{album.artist}}</p>
+                      </li>
+                  </ul>
+                  <h3 ng-show="hasArtists()">Artists</h3>
+                  <ul>
+                      <li typeahead-item="artist" ng-repeat="artist in artists" class="results">
+                          <img ng-src="{{imageSource(artist)}}"><p class="name">{{artist.name}}</p>
+                      </li>
+                  </ul>
+              </div>
+          </typeahead>
+      </div>
+  </div>
   
 
 
@@ -33,7 +52,8 @@
     <!-- Scripts -->
     <script src="/shared/app.module.js"></script>
     <!-- directives -->
-    <script src="/shared/directives/groupAuto.directive.js"></script>
+    <script src="/shared/directives/typehead.directive.js"></script>
+    <script src="/shared/directives/typeheadItem.directive.js"></script>
 
     <!-- Controllers -->
     <script src="/shared/controllers/shared.ctrl.js"></script>
